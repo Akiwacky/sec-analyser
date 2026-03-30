@@ -1,0 +1,22 @@
+touch .gitignore
+```
+
+Open `.gitignore` and paste this in:
+```
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Data and outputs
+data/
+outputs/
+
+# VS Code settings
+.vscode/
+
+# Environment variables (if we add API keys later)
+.env
