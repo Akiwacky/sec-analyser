@@ -1,6 +1,7 @@
 from edgar import get_cik, get_company_facts
 from utils import get_concept_data, to_annual_dataframe
 import pandas as pd
+from visualise import show_all
 
 def get_financials(ticker: str, years: int = 10) -> dict:
     """
@@ -81,6 +82,8 @@ from ratios import calculate_ratios
 
 # After building master df add:
 ratios = calculate_ratios(master)
+
+show_all(ratios, "AAPL")
 
 print("\nProfitability & Efficiency:")
 print(ratios[[
